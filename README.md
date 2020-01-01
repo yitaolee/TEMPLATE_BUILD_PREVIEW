@@ -1,6 +1,9 @@
-# ChumiTemplate
+# Template Build Preview
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+
+Create a new component in templates folder for a new template 
+
 
 ## Development server
 
