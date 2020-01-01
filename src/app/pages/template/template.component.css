@@ -1,0 +1,21 @@
+.settings-bar {
+  position: fixed;
+  display: flex;
+  z-index: 10000;
+  width: 100vw;
+  height: 80px;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+}
+
+.round-button {
+  border-radius: 100px;
+  border: none;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background: #6c2eb9;
+  text-align: center;
+  color: white;
+}

@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/jam-icons/css/jam.min.css",
+              "src/assets/css/swiper.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/background-blur.min.js"
+            ]
           },
           "configurations": {
             "production": {

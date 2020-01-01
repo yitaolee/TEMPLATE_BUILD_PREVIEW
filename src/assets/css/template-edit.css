@@ -1,0 +1,91 @@
+.navbar-default .navbar-collapse.cm-module-overlay{
+  border-color:transparent;
+}
+.navbar-default .navbar-collapse.cm-module-overlay:hover{
+  border-color:#2196F3;
+}
+
+.toolbar-edit-mode .toolbartext-edit-mode {
+  opacity: 0;
+  visibility: hidden;
+  background-color: #2196F3;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #888;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.toolbar-edit-mode .tbackground-edit-mode {
+  visibility: hidden;
+  background: rgba(115, 118, 120, 0.4);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 4;
+}
+
+.toolbar-edit-mode:hover .tbackground-edit-mode {
+  visibility: visible;
+}
+
+.toolbar-edit-mode:hover .toolbartext-edit-mode {
+  opacity: 1;
+  visibility: visible;
+}
+
+.toolbar-edit-mode .toolbartext-edit-mode > button {
+  color: #fff;
+  border: none;
+  background-color: #2196F3;
+  padding: 0 15px;
+  font-size: 24px;
+  -webkit-transition: opacity .2s ease;
+  -moz-transition: opacity .2s ease;
+  -ms-transition: opacity .2s ease;
+  -o-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+.toolbar-edit-mode .toolbartext-edit-mode > button:hover{
+  opacity: .9;
+}
+.toolbar-edit-mode .toolbartext-edit-mode > button + button{
+  border-left: 2px solid rgba(255,255,255,.1);
+}
+
+.cm-section-overlay {
+  border: 2px solid transparent;
+}
+
+.cm-module-overlay {
+  border: 1px solid transparent;
+}
+
+.cm-section-overlay:hover,
+.cm-module-overlay:hover {
+  border-color: #2196F3;
+}
+
+.cm-section-overlay:focus,
+.cm-module-overlay:focus {
+  border-color: #d7d8df;
+  outline: none;
+}
+
+.color-button {
+  font-size: 16px;
+  width: 100px;
+  border: none;
+  color: white;
+  background-color: #2196F3;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  right: 85%;
+  z-index: 4;
+}
+
