@@ -1,1 +1,596 @@
-<p>demo works!</p>
+<div class="preloader">
+    <div class="status"></div>
+  </div>
+  
+  <div [hidden]="showpage">
+  
+    <body data-rsssl=1 class="page-template-default page page-id-1087 woocommerce-no-js tg_menu_transparent tg_lightbox_black tg_sidemenu_desktop leftalign elementor-default elementor-page elementor-page-1087">
+    <div id="perspective" style="">
+      <input type="hidden" id="pp_menu_layout" name="pp_menu_layout" value="leftalign" />
+      <input type="hidden" id="pp_enable_right_click" name="pp_enable_right_click" value="" />
+      <input type="hidden" id="pp_enable_dragging" name="pp_enable_dragging" value="" />
+      <input type="hidden" id="pp_image_path" name="pp_image_path" value="https://themes.themegoods.com/musico/demo/wp-content/themes/musico/images/" />
+      <input type="hidden" id="pp_homepage_url" name="pp_homepage_url" value="https://themes.themegoods.com/musico/demo/" />
+      <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1" />
+      <input type="hidden" id="tg_sidebar_sticky" name="tg_sidebar_sticky" value="1" />
+      <input type="hidden" id="tg_footer_reveal" name="tg_footer_reveal" value="" />
+      <input type="hidden" id="pp_topbar" name="pp_topbar" value="" />
+      <input type="hidden" id="post_client_column" name="post_client_column" value="4" />
+      <input type="hidden" id="pp_back" name="pp_back" value="Back" />
+      <input type="hidden" id="tg_lightbox_thumbnails" name="tg_lightbox_thumbnails" value="thumbnail" />
+      <input type="hidden" id="tg_lightbox_thumbnails_display" name="tg_lightbox_thumbnails_display" value="1" />
+      <input type="hidden" id="tg_lightbox_timer" name="tg_lightbox_timer" value="7000" />
+      <input type="hidden" id="tg_cart_url" name="tg_cart_url" value="../cart/index.html" />
+      <input type="hidden" id="tg_live_builder" name="tg_live_builder" value="0" />
+      <input type="hidden" id="pp_footer_style" name="pp_footer_style" value="4" />
+
+      <div id="wrapper" class="hasbg transparent">
+        <div class="chumi_header header_style_wrapper" [hidden]="!data.chumi_header.show">
+          <div class="top_bar hasbg">
+            <div class="standard_wrapper">
+              <div id="logo_wrapper" style="padding: 0">
+                <div id="logo_normal" class="logo_container" style="padding-left: 50px">
+                  <div class="logo_align">
+                    <a id="custom_logo" class="logo_wrapper hidden">
+                      <img src="{{data?.chumi_header?.logo}}" alt="logo" width="101" height="19" />
+                    </a>
+                  </div>
+                </div>
+                <div id="logo_transparent" class="logo_container">
+                  <div class="logo_align">
+                    <a id="custom_logo_transparent" class="logo_wrapper default">
+                      <img class="chumi-header-logo" src="{{data?.chumi_header?.logo}}" alt="logo" width="101" height="19" />
+                    </a>
+                  </div>
+                </div>
+                <div id="logo_right_wrapper" style="padding-top: 30px">
+
+                </div>
+  
+                <div id="menu_wrapper">
+                  <div>
+                    <div class="" style="padding-left: 40%;">
+                      <div id="menu_border_wrapper">
+                        <div class="cm-module-overlay chumi-navbar menu-main-menu-container">
+                          <ul id="main_menu" class="hide-menu nav">
+                            <li class="chumi-nav-item megamenu col3 menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-82" style="cursor: pointer"><a (click)="gotoURL(Home)">{{data?.chumi_header?.navTitle[0]}}</a>
+                            </li>
+                            <li class="chumi-nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85" style="cursor: pointer"><a (click)="gotoURL(Tour)">{{data?.chumi_header?.navTitle[1]}}</a>
+                            </li>
+                            <li class="chumi-nav-item megamenu col4 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-83" style="cursor: pointer"><a (click)="gotoURL(Socials)">{{data?.chumi_header?.navTitle[2]}}</a>
+                            </li>
+                            <li class="chumi-nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-84" style="cursor: pointer"><a (click)="gotoURL(Artists)">{{data?.chumi_header?.navTitle[3]}}</a>
+                            </li>
+  
+                            <ng-container *ngFor="let item of data?.chumi_header?.navURL; let b = index;">
+                              <ng-container *ngIf="data?.chumi_header?.navExternalTitle != undefined">
+  
+                                <li><a class="chumi-nav-item page-scroll" href="{{item}}">{{data?.chumi_header?.navExternalTitle[b]}}</a></li>
+  
+                              </ng-container>
+                            </ng-container>
+  
+                          </ul>
+                        </div>
+                      </div>
+  
+                    </div>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="" style="padding: 0px">
+          <div class="inner">
+            <div class="inner_wrapper">
+              <div class="sidebar_content full_width">
+                <div class="elementor elementor-1087">
+                  <div class="elementor-inner">
+                    <div class="elementor-section-wrap">
+                      <section data-id="dd0dc61" [hidden]="!data.chumi_slogan.show" [style.background-image]="'url(' + data.chumi_slogan.img[0] + ')'" class="cm-section-overlay chumi-slogan-img chumi_slogan elementor-element elementor-element-dd0dc61 elementor-section-stretched elementor-section-height-full elementor-section-content-middle elementor-section-full_width elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section" #Home>
+                        <div class="elementor-background-overlay"></div>
+                        <div class="elementor-container elementor-column-gap-default">
+                          <div class="elementor-row">
+                            <div data-id="eb03acc" class="elementor-element elementor-element-eb03acc stellar elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
+                              <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                                  <div data-id="7eafbec" class="elementor-element elementor-element-7eafbec elementor-widget elementor-widget-musico-animated-background-heading" data-element_type="musico-animated-background-heading.default">
+                                    <div class="elementor-widget-container">
+                                      <h1 class="cm-module-overlay chumi-slogan tg_animated_heading" style="background-image: url('https://images.chumi.co/musico2/img/scott-rodgerson-375826-unsplash.jpg');">
+                                        {{data?.chumi_slogan?.Slogan}}
+                                      </h1>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section [hidden]="!data.chumi_sponsors.show" data-id="73adcd4" class="cm-section-overlay chumi_sponsors elementor-element elementor-element-73adcd4 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                          <div class="elementor-row" style="display: table-cell; text-align: -webkit-center;">
+                            <div data-id="0d08209" class="elementor-element elementor-element-0d08209 elementor-column elementor-top-column" data-element_type="column">
+                              <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                                    <div data-id="18e91a2" class="elementor-element elementor-element-18e91a2 animated fadeInLeft animated-fast elementor-invisible elementor-widget elementor-widget-button" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}" data-element_type="button.default">
+                                      <div class="elementor-widget-container">
+                                        <div class="elementor-button-wrapper" align="center">
+                                          <ng-container *ngFor="let item of data?.chumi_sponsors?.sponsorImg">
+                                            <img class="chumi-sponsor-img" src="{{item}}" style="height: 50px">
+                                          </ng-container>
+  
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+  
+                          </div>
+                        </div>
+                      </section>
+  
+                        <div class="cm-section-overlay chumi_schedule" [hidden]="!data.chumi_schedule.show" >
+                          <section data-id="c6c34a1" class="elementor-element elementor-element-c6c34a1 headline elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" #Tour>
+                            <div class="elementor-container elementor-column-gap-default">
+                              <div class="elementor-row">
+                                <div data-id="7a5119a" class="elementor-element elementor-element-7a5119a elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
+                                  <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                      <div data-id="a91a146" class="elementor-element elementor-element-a91a146 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-element_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                          <span class="chumi-schedule-title elementor-heading-title elementor-size-default">{{data?.chumi_schedule?.scheduletitle}}</span></div>
+                                      </div>
+                                      <div data-id="39e2461" class="elementor-element elementor-element-39e2461 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                          <h1 class="chumi-schedule-content elementor-heading-title elementor-size-default">{{data?.chumi_schedule?.schedule_content}}</h1></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <section data-id="f8c52e9" class="elementor-element elementor-element-f8c52e9 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section" style="background-image: url(https://themegoods-cdn-pzbycso8wng.stackpathdns.com/musico/demo/wp-content/uploads/2018/10/efe-kurnaz-315384-unsplash.jpg)">
+                            <div class="elementor-background-overlay"></div>
+  
+                            <div class="elementor-container elementor-column-gap-default">
+                              <div class="elementor-row">
+                                <div data-id="c5e3f45" class="elementor-element elementor-element-c5e3f45 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
+                                  <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                      <div data-id="70b44a2" class="elementor-element elementor-element-70b44a2 animated fadeIn animated-fast custom_padding elementor-invisible elementor-widget elementor-widget-musico-portfolio-timeline" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:400}" data-element_type="musico-portfolio-timeline.default">
+                                        <div class="elementor-widget-container" style="color: white; padding: 30px">
+                                          <div class="tg_portfolio_timeline_wrapper cd-horizontal-timeline">
+                                            <div class="timeline">
+                                              <div class="events-wrapper">
+                                                <div class="events">
+                                                  <ol>
+                                                    <ng-container *ngFor="let scheitem of data.chumi_schedule.scheduledate_texts; let b = index">
+                                                      <li><a class="chumi-schedule-date" href="#0" [attr.data-date]="scheitem" style="color: white">{{data?.chumi_schedule?.scheduledate[b]}}</a></li>
+  
+                                                    </ng-container>
+  
+                                                  </ol><span class="filling-line" aria-hidden="true"></span></div>
+                                              </div>
+                                              <ul class="cd-timeline-navigation">
+                                                <li>
+                                                  <a href="#0" class="prev inactive"></a>
+                                                </li>
+                                                <li>
+                                                  <a href="#0" class="next"></a>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                            <div class="events-content">
+                                              <ol>
+  
+                                                <ng-container *ngFor="let item of data.chumi_schedule.schedule_time; let i = index">
+                                                  <ng-container *ngIf="i == 0">
+                                                    <li class="selected" [attr.data-date]="data.chumi_schedule.scheduledate_texts[i]">
+                                                      <div class="portfolio_timeline_content_wrapper">
+                                                        <div class="portfolio_timeline_img">
+                                                          <img class="chumi-schedule-img" src="{{data.chumi_schedule.scheduleimg}}" alt="" /></div>
+                                                        <div class="portfolio_timeline_content one_third">
+                                                          <h2 class="chumi-schedule-info" style="color: white">{{data.chumi_schedule.scheduleinfo[i]}}</h2>
+                                                          <em class="chumi-schedule-time">{{data.chumi_schedule.schedule_time[i]}}</em>
+                                                          <div class="chumi-schedule-detail-content events-content-desc"><i class="fa fa-map-marker"></i>{{data.chumi_schedule.schedule_detailcontent[i]}}</div>
+                                                          <a class="portfolio_timeline_link" href="{{data?.chumi_schedule?.scheduleticketUrls[i]}}" target="_blank" style="color: white"><span
+                                                            class="chumi-schedule-ticket">{{data.chumi_schedule.scheduleticket[i]}}</span></a></div>
+                                                      </div>
+                                                    </li>
+  
+                                                  </ng-container>
+                                                  <ng-container *ngIf="i != 0">
+                                                    <li class="" [attr.data-date]="data.chumi_schedule.scheduledate_texts[i]">
+                                                      <div class="portfolio_timeline_content_wrapper">
+                                                        <div class="portfolio_timeline_img">
+                                                          <img class="chumi-schedule-img" src="{{data.chumi_schedule.scheduleimg}}" alt="" /></div>
+                                                        <div class="portfolio_timeline_content one_third">
+                                                          <h2 class="chumi-schedule-info" style="color: white">{{data.chumi_schedule.scheduleinfo[i]}}</h2>
+                                                          <em class="chumi-schedule-time">{{data.chumi_schedule.schedule_time[i]}}</em>
+                                                          <div class="chumi-schedule-detail-content events-content-desc"><i class="fa fa-map-marker"></i>{{data.chumi_schedule.schedule_detailcontent[i]}}</div>
+                                                          <a style="color: white" class="portfolio_timeline_link" href="{{data?.chumi_schedule?.scheduleticketUrls[i]}}" target="_blank"><span
+                                                            class="chumi-schedule-ticket">{{data.chumi_schedule.scheduleticket[i]}}</span></a></div>
+                                                      </div>
+                                                    </li>
+  
+                                                  </ng-container>
+                                                </ng-container>
+  
+                                                <!--
+                                                                                          <li class="chumi-schedule-date selected" [attr.data-date]="data.chumi_schedule.scheduledate[0]">
+                                                                                            <div class="portfolio_timeline_content_wrapper">
+                                                                                              <div class="portfolio_timeline_img">
+                                                                                                <img class="chumi-schedule-img" src="{{data.chumi_schedule.scheduleimg}}" alt="" /></div>
+                                                                                              <div class="portfolio_timeline_content one_third">
+                                                                                                <h2 class="chumi-schedule-info">{{data.chumi_schedule.scheduleinfo[0]}}</h2>
+                                                                                                <em class="chumi-schedule-time">{{data.chumi_schedule.schedule_time[0]}}</em>
+                                                                                                <div class="chumi-schedule-detail-content events-content-desc"><i class="fa fa-map-marker"></i>{{data.chumi_schedule.schedule_detailcontent[0]}}</div>
+                                                                                                <a class="portfolio_timeline_link" href="" target="_blank"><span
+                                                                                                  class="chumi-schedule-ticket ti-arrow-right">{{data.chumi_schedule.scheduleticket[0]}}</span></a></div>
+                                                                                            </div>
+                                                                                          </li>
+                                                                                          <li class="chumi-schedule-date" [attr.data-date]="data.chumi_schedule.scheduledate[1]">
+                                                                                            <div class="portfolio_timeline_content_wrapper">
+                                                                                              <div class="portfolio_timeline_img">
+                                                                                                <img class="chumi-schedule-img" src="{{data.chumi_schedule.scheduleimg}}" alt="" /></div>
+                                                                                              <div class="portfolio_timeline_content one_third">
+                                                                                                <h2 class="chumi-schedule-info">{{data.chumi_schedule.scheduleinfo[1]}}</h2>
+                                                                                                <em class="chumi-schedule-time">{{data.chumi_schedule.schedule_time[1]}}</em>
+                                                                                                <div class="chumi-schedule-detail-content events-content-desc"><i class="fa fa-map-marker"></i>{{data.chumi_schedule.schedule_detailcontent[1]}}</div>
+                                                                                                <a class="portfolio_timeline_link" href="" target="_blank"><span
+                                                                                                  class="chumi-schedule-ticket ti-arrow-right">{{data.chumi_schedule.scheduleticket[1]}}</span></a></div>
+                                                                                            </div>
+                                                                                          </li>
+                                                                                          <li class="chumi-schedule-date" [attr.data-date]="data.chumi_schedule.scheduledate[2]">
+                                                                                            <div class="portfolio_timeline_content_wrapper">
+                                                                                              <div class="portfolio_timeline_img">
+                                                                                                <img class="chumi-schedule-img" src="{{data.chumi_schedule.scheduleimg}}" alt="" /></div>
+                                                                                              <div class="portfolio_timeline_content one_third">
+                                                                                                <h2 class="chumi-schedule-info">{{data.chumi_schedule.scheduleinfo[2]}}</h2>
+                                                                                                <em class="chumi-schedule-time">{{data.chumi_schedule.schedule_time[2]}}</em>
+                                                                                                <div class="chumi-schedule-detail-content events-content-desc"><i class="fa fa-map-marker"></i>{{data.chumi_schedule.schedule_detailcontent[2]}}</div>
+                                                                                                <a class="portfolio_timeline_link" href="" target="_blank"><span
+                                                                                                  class="chumi-schedule-ticket ti-arrow-right">{{data.chumi_schedule.scheduleticket[2]}}</span></a></div>
+                                                                                            </div>
+                                                                                          </li>
+                                                                                          <li class="chumi-schedule-date" [attr.data-date]="data.chumi_schedule.scheduledate[3]">
+                                                                                            <div class="portfolio_timeline_content_wrapper">
+                                                                                              <div class="portfolio_timeline_img">
+                                                                                                <img class="chumi-schedule-img" src="{{data.chumi_schedule.scheduleimg}}" alt="" /></div>
+                                                                                              <div class="portfolio_timeline_content one_third">
+                                                                                                <h2 class="chumi-schedule-info">{{data.chumi_schedule.scheduleinfo[3]}}</h2>
+                                                                                                <em class="chumi-schedule-time">{{data.chumi_schedule.schedule_time[3]}}</em>
+                                                                                                <div class="chumi-schedule-detail-content events-content-desc"><i class="fa fa-map-marker"></i>{{data.chumi_schedule.schedule_detailcontent[3]}}</div>
+                                                                                                <a class="portfolio_timeline_link" href="" target="_blank"><span
+                                                                                                  class="chumi-schedule-ticket ti-arrow-right">{{data.chumi_schedule.scheduleticket[3]}}</span></a></div>
+                                                                                            </div>
+                                                                                          </li>
+                                                                                          <li class="chumi-schedule-date" [attr.data-date]="data.chumi_schedule.scheduledate[4]">
+                                                                                            <div class="portfolio_timeline_content_wrapper">
+                                                                                              <div class="portfolio_timeline_img">
+                                                                                                <img class="chumi-schedule-img" src="{{data.chumi_schedule.scheduleimg}}" alt="" /></div>
+                                                                                              <div class="portfolio_timeline_content one_third">
+                                                                                                <h2 class="chumi-schedule-info">{{data.chumi_schedule.scheduleinfo[4]}}</h2>
+                                                                                                <em class="chumi-schedule-time">{{data.chumi_schedule.schedule_time[4]}}</em>
+                                                                                                <div class="chumi-schedule-detail-content events-content-desc"><i class="fa fa-map-marker"></i>{{data.chumi_schedule.schedule_detailcontent[4]}}</div>
+                                                                                                <a class="portfolio_timeline_link" href="" target="_blank"><span
+                                                                                                  class="chumi-schedule-ticket ti-arrow-right">{{data.chumi_schedule.scheduleticket[4]}}</span></a></div>
+                                                                                            </div>
+                                                                                          </li>
+                                                -->
+  
+  
+  
+                                              </ol>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+  
+                        </div>
+  
+                        <div class="cm-section-overlay chumi_speakers" [hidden]="!data.chumi_speakers.show">
+                          <section data-id="30d77e7" class="elementor-element elementor-element-30d77e7 headline elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" #Socials>
+                            <div class="elementor-container elementor-column-gap-default">
+                              <div class="elementor-row">
+                                <div data-id="1103e73" class="elementor-element elementor-element-1103e73 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
+                                  <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                      <div data-id="ac35624" class="elementor-element elementor-element-ac35624 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-element_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                          <span class="cm-module-overlay chumi-speaker-title elementor-heading-title elementor-size-default">{{data?.chumi_speakers?.speaker_title}}</span></div>
+                                      </div>
+                                      <div data-id="acdfe86" class="elementor-element elementor-element-acdfe86 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                          <h1 class="cm-module-overlay chumi-speaker-content elementor-heading-title elementor-size-default">{{data?.chumi_speakers?.speaker_content}}</h1></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <section data-id="b883f39" class="elementor-element elementor-element-b883f39 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                              <div class="elementor-row">
+                                <div data-id="6e3c5c5" class="elementor-element elementor-element-6e3c5c5 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
+                                  <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                      <div data-id="af3f8c1" class="elementor-element elementor-element-af3f8c1 elementor-widget elementor-widget-musico-background-list" data-element_type="musico-background-list.default">
+                                        <div class="elementor-widget-container">
+                                          <div class="tg_background_list_wrapper four_cols">
+                                            <ng-container *ngFor="let speakitem of data?.chumi_speakers?.speaker_name; let j = index">
+                                              <div class="tg_background_list_column ">
+                                                <div class="tg_background_list_content">
+                                                  <div class="tg_background_list_title">
+                                                    <h3 class="chumi-speaker-name">{{speakitem}}</h3></div>
+                                                  <div class="tg_background_list_link">
+                                                    <div class="chumi-speaker-intro tg_background_list_desc">{{data?.chumi_speakers?.speaker_intro[j]}}</div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <figure class="tg_background_img hover">
+                                                <div class="tg_background_list_overlay"></div>
+                                                <img class="chumi-speakerimg" src="{{data?.chumi_speakers?.speakerImg[j]}}" alt="" />
+                                              </figure>
+                                            </ng-container>
+  
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+  
+                        </div>
+  
+                      <div class="cm-section-overlay chumi_about" [hidden]="!data.chumi_about.show">
+                        <section data-id="ee5162d" class="elementor-element elementor-element-ee5162d headline elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" #Artists>
+                          <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                              <div data-id="3fb44a6" class="elementor-element elementor-element-3fb44a6 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
+                                  <div class="elementor-widget-wrap">
+                                    <div data-id="6e974dc" class="elementor-element elementor-element-6e974dc animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-element_type="heading.default">
+                                      <div class="elementor-widget-container">
+                                        <span class="cm-module-overlay chumi-about-title elementor-heading-title elementor-size-default">{{data?.chumi_about?.aboutTitle}}</span></div>
+                                    </div>
+                                    <div data-id="e81fdcc" class="elementor-element elementor-element-e81fdcc animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="heading.default">
+                                      <div class="elementor-widget-container">
+                                        <h1 class="cm-module-overlay chumi-about-subtitle elementor-heading-title elementor-size-default">{{data?.chumi_about?.aboutsubtitle}}</h1></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section data-id="e45b94a" class="elementor-element elementor-element-e45b94a elementor-section-stretched elementor-section-full_width animated fadeInUp animated-fast elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:400}" data-element_type="section">
+                          <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                              <div data-id="1aee2f2" class="elementor-element elementor-element-1aee2f2 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
+                                  <div class="elementor-widget-wrap">
+                                    <div data-id="169efeb" class="elementor-element elementor-element-169efeb elementor-widget elementor-widget-heading" data-element_type="heading.default">
+                                      <div class="elementor-widget-container">
+                                        <h3 class="cm-module-overlay chumi-about-content elementor-heading-title elementor-size-default">{{data?.chumi_about?.aboutContent}}</h3></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br class="clear" />
+        </div>
+      </div>
+      <div id="footer_wrapper">
+        <div class="standard_wrapper" style="padding-left: 0px;padding-right: 0px">
+          <div class="elementor elementor-1166">
+            <div class="elementor-inner">
+              <div class="elementor-section-wrap">
+                <section data-id="ce699be" [hidden]="!data.chumi_footer.show"  class="cm-section-overlay chumi_footer elementor-element elementor-element-ce699be elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
+                  <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+                      <div data-id="d095b4b" class="elementor-element elementor-element-d095b4b mobile_wrapper elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
+                        <div class="elementor-column-wrap elementor-element-populated">
+                          <div class="elementor-widget-wrap">
+                            <div data-id="bced54b" class="elementor-element elementor-element-bced54b elementor-widget elementor-widget-image" data-element_type="image.default">
+                              <div class="elementor-widget-container">
+                                <div class="elementor-image">
+                                  <img width="202" height="38" src="{{data?.chumi_footer?.footerlogo}}" class="chumi-footer-logo attachment-large size-large" alt="" /></div>
+                              </div>
+                            </div>
+                            <div data-id="6d255d4" class="elementor-element elementor-element-6d255d4 elementor-shape-circle elementor-widget elementor-widget-social-icons" data-element_type="social-icons.default">
+                              <div class="elementor-widget-container">
+                                <div class="elementor-social-icons-wrapper">
+                                  <a class="chumi-social-facebook elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-animation-push" href="{{data?.chumi_footer?.Facebook}}" target="_blank">
+                                    <span class="elementor-screen-only">Facebook</span>
+                                    <i class="fa fa-facebook"></i>
+                                  </a>
+                                  <a class="chumi-social-youtube elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-animation-push" href="{{data?.chumi_footer?.Youtube}}" target="_blank">
+                                    <span class="elementor-screen-only">Youtube</span>
+                                    <i class="fa fa-youtube"></i>
+                                  </a>
+                                  <a class="chumi-social-twitter elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-push" href="{{data?.chumi_footer?.Twitter}}" target="_blank">
+                                    <span class="elementor-screen-only">Twitter</span>
+                                    <i class="fa fa-twitter"></i>
+                                  </a>
+                                  <a class="chumi-social-ins elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-push" href="{{data?.chumi_footer?.Instagram}}" target="_blank">
+                                    <span class="elementor-screen-only">Instagram</span>
+                                    <i class="fa fa-instagram"></i>
+                                  </a>
+                                  <a class="chumi-social-spotify elementor-icon elementor-social-icon elementor-social-icon-spotify elementor-animation-push" href="{{data?.chumi_footer?.Spotify}}" target="_blank">
+                                    <span class="elementor-screen-only">Spotify</span>
+                                    <i class="fa fa-spotify"></i>
+                                  </a>
+                                  <a class="chumi-social-itunes elementor-icon elementor-social-icon elementor-social-icon-apple elementor-animation-push" href="{{data?.chumi_footer?.Itunes}}" target="_blank">
+                                    <span class="elementor-screen-only">Apple</span>
+                                    <i class="fa fa-apple"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div data-id="51eb830" class="elementor-element elementor-element-51eb830 elementor-widget elementor-widget-text-editor" data-element_type="text-editor.default">
+                              <div class="elementor-widget-container">
+                                <div class="elementor-text-editor elementor-clearfix">
+                                  <p class="p1">
+  
+                                    <a class="cm-module-overlay chumi-footer-footernav" style="color: white" href={{data.chumi_footer.footerlinknavUrl[0]}} target="_blank">{{data?.chumi_footer?.footerlinknav[0]}}</a>
+  
+                                    <span class="Apple-converted-space">    </span>
+                                    <a class="cm-module-overlay chumi-footer-footernav" style="color: white" href={{data.chumi_footer.footerlinknavUrl[1]}} target="_blank">{{data?.chumi_footer?.footerlinknav[1]}}</a>
+  
+                                    <span class="Apple-converted-space">    </span>
+                                    <a class="cm-module-overlay chumi-footer-footernav" style="color: white" href={{data.chumi_footer.footerlinknavUrl[2]}} target="_blank">{{data?.chumi_footer?.footerlinknav[2]}}</a>
+  
+                                    <span class="Apple-converted-space">    </span>
+                                    <a class="cm-module-overlay chumi-footer-footernav" style="color: white" href={{data.chumi_footer.footerlinknavUrl[3]}} target="_blank">{{data?.chumi_footer?.footerlinknav[3]}}</a>
+                                    </p>
+                                </div>
+                              </div>
+                            </div>
+                            <br>
+                            <div data-id="8a93380" class="elementor-element elementor-element-8a93380 elementor-widget elementor-widget-text-editor" data-element_type="text-editor.default">
+                              <div class="elementor-widget-container">
+                                <div class="elementor-text-editor elementor-clearfix">
+                                  <a style="color: white" href="https://www.chumi.co" target="_blank">© 2019 All rights reserved | Event Ticketing Partner Chumi</a>
+  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><a id="toTop" href="javascript:;"><i
+      class="fa fa-angle-up"></i></a>
+      <div id="option_wrapper">
+        <div class="inner">
+          <div style="text-align:center">
+            <h5>Demo Homepages</h5>
+            <p>
+              Here are example of homepage that can be imported within one click.</p>
+            <ul class="demo_list">
+              <li>
+                <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/musico/demo/wp-content/themes/musico/cache/demos/1.jpg" alt="Home 1" />
+                <div class="demo_thumb_hover_wrapper">
+                  <div class="demo_thumb_hover_inner">
+                    <div class="demo_thumb_desc">
+                      <h6>Home 1</h6>
+                      <a href="https://themes.themegoods.com/musico/demo/home-1" target="_blank" class="button white">Launch</a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/musico/demo/wp-content/themes/musico/cache/demos/2.jpg" alt="Home 2" />
+                <div class="demo_thumb_hover_wrapper">
+                  <div class="demo_thumb_hover_inner">
+                    <div class="demo_thumb_desc">
+                      <h6>Home 2</h6>
+                      <a href="https://themes.themegoods.com/musico/demo/home-2" target="_blank" class="button white">Launch</a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/musico/demo/wp-content/themes/musico/cache/demos/3.jpg" alt="Home 3" />
+                <div class="demo_thumb_hover_wrapper">
+                  <div class="demo_thumb_hover_inner">
+                    <div class="demo_thumb_desc">
+                      <h6>Home 3</h6>
+                      <a href="https://themes.themegoods.com/musico/demo/home-3" target="_blank" class="button white">Launch</a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/musico/demo/wp-content/themes/musico/cache/demos/4.jpg" alt="Home 4" />
+                <div class="demo_thumb_hover_wrapper">
+                  <div class="demo_thumb_hover_inner">
+                    <div class="demo_thumb_desc">
+                      <h6>Home 4</h6>
+                      <a href="https://themes.themegoods.com/musico/demo/home-4" target="_blank" class="button white">Launch</a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/musico/demo/wp-content/themes/musico/cache/demos/5.jpg" alt="Home 5" />
+                <div class="demo_thumb_hover_wrapper">
+                  <div class="demo_thumb_hover_inner">
+                    <div class="demo_thumb_desc">
+                      <h6>Home 5</h6>
+                      <a href="https://themes.themegoods.com/musico/demo/home-5" target="_blank" class="button white">Launch</a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/musico/demo/wp-content/themes/musico/cache/demos/6.jpg" alt="Home 6" />
+                <div class="demo_thumb_hover_wrapper">
+                  <div class="demo_thumb_hover_inner">
+                    <div class="demo_thumb_desc">
+                      <h6>Home 6</h6>
+                      <a href="https://themes.themegoods.com/musico/demo/home-6" target="_blank" class="button white">Launch</a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/musico/demo/wp-content/themes/musico/cache/demos/7.jpg" alt="Home 7" />
+                <div class="demo_thumb_hover_wrapper">
+                  <div class="demo_thumb_hover_inner">
+                    <div class="demo_thumb_desc">
+                      <h6>Home 7</h6>
+                      <a href="https://themes.themegoods.com/musico/demo/home-7" target="_blank" class="button white">Launch</a></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/musico/demo/wp-content/themes/musico/cache/demos/8.jpg" alt="Home 8" />
+                <div class="demo_thumb_hover_wrapper">
+                  <div class="demo_thumb_hover_inner">
+                    <div class="demo_thumb_desc">
+                      <h6>Home 8</h6>
+                      <a href="https://themes.themegoods.com/musico/demo/home-8" target="_blank" class="button white">Launch</a></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="ajax-login-register-login-dialog" class="zm_alr_login_dialog zm_alr_dialog ajax-login-register-container" title="Login" data-security="8483da51dc">
+      <div id="ajax-login-register-login-target" class="ajax-login-register-login-dialog">Loading...</div>
+    </div>
+    <div id="ajax-login-register-dialog" class="zm_alr_register_dialog zm_alr_dialog ajax-login-register-container" title="Register" data-security="bed672e48d" style="display: none;">
+      <div id="ajax-login-register-target" class="ajax-login-register-dialog">Loading...</div>
+    </div>
+  
+    </body>  
+  </div>  
