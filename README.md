@@ -2,29 +2,26 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
-Create a new component in templates folder for a new template 
+## Convert html page to angular component
 
+Create a new component in templates folder for a new template
+Copy body of html to component html
+mark section in html (refer to wiki for section names and values)
+replace all values in html with data.section.someValue
+replace repeated structure with ngFor
+Copy css to component css
+Upload js files to s3 and use loadScripts function to load them in ngOnInit
 
-## Development server
+## Build Web Element
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+copy all methods of ts to test.component.ts under TEMPLATE_BUILD project
+copy contents of css to test.component.scss under TEMPLATE_BUILD project
+copy contents of html to test.component.html under TEMPLATE_BUILD project
+npm run build:ce
+chumi-element.js will be created in elements folder, rename it (e.g. chumi-someTemplateName.js)
 
-## Code scaffolding
+## Test Web Element
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copy the web element to assets folder
+Use http://localhost:4200/preview/someTemplateName to check if the page is loaded succesfully
+Upload to s3
