@@ -18,6 +18,7 @@ const routes: Routes = [
         component: EventComponent
       },
       { path: "p/:page", component: TemplateComponent },
+      { path: 'preview/:tname', component: TemplateComponent },
       { path: "preview/:tname/:page", component: TemplateComponent },
       { path: "template/edit", component: TemplateComponent },
       { path: "templates/demo", component: DemoComponent },
