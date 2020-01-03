@@ -1,0 +1,341 @@
+<div class="preloader">
+  <div class="status"></div>
+</div>
+
+<!-- <div [hidden]="showpage"> -->
+<section
+  class="cm-section-overlay chumi-slogan-img banner-area relative"
+  id="home"
+  [style.background-image]="'url(' + data.chumi_slogan.img[0] + ')'"
+>
+  <div class="container">
+    <!-- Start Header Area -->
+    <header
+      class="chumi_header default-header"
+      [hidden]="!data.chumi_header.show"
+    >
+      <div class="container">
+        <div class="header-wrap">
+          <div
+            class="header-top d-flex justify-content-between align-items-center"
+          >
+            <div class="logo">
+              <a
+                ><img
+                  class="chumi-header-logo"
+                  src="{{ data?.chumi_header?.logo }}"
+                  alt=""
+              /></a>
+            </div>
+            <div
+              class="cm-module-overlay chumi-navbar main-menubar d-flex align-items-center"
+            >
+              <nav class="hide">
+                <a
+                  style="cursor: pointer; color: #eaeaea;"
+                  class="chumi-nav-item"
+                  (click)="gotoURL(home)"
+                  >{{ data.chumi_header.navTitle[0] }}</a
+                >
+                <a
+                  style="cursor: pointer; color: #eaeaea;"
+                  (click)="gotoURL(feature)"
+                  class="chumi-nav-item"
+                  >{{ data.chumi_header.navTitle[1] }}</a
+                >
+                <a
+                  style="cursor: pointer; color: #eaeaea;"
+                  class="chumi-nav-item"
+                  (click)="gotoURL(artist)"
+                  >{{ data.chumi_header.navTitle[2] }}</a
+                >
+                <a
+                  style="cursor: pointer; color: #eaeaea;"
+                  class="chumi-nav-item"
+                  (click)="gotoURL(contact)"
+                  >{{ data.chumi_header.navTitle[3] }}</a
+                >
+                <!--
+                    <ng-container *ngFor="let item of data?.chumi_header?.navExternalTitle; let b = index;">
+                      <a class="chumi-nav-item page-scroll" href="{{data?.chumi_header?.navURL[b]}}">{{item}}</a>
+                    </ng-container>
+  -->
+              </nav>
+              <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header Area -->
+
+    <div
+      class="chumi_slogan row fullscreen align-items-center justify-content-center"
+      style="height: 735px;"
+      [hidden]="!data.chumi_slogan.show"
+      #home
+    >
+      <div class="col-lg-10">
+        <div class="banner-content text-center">
+          <h1 class="cm-module-overlay text-uppercase chumi-slogan">
+            {{ data.chumi_slogan.Slogan }}
+          </h1>
+          <p class="cm-module-overlay text-uppercase mx-auto chumi-subslogan">
+            {{ data.chumi_slogan.subSlogan }}
+          </p>
+          <ng-container *ngIf="post && post.fromEditTemplate">
+            <a href="javascript:void(0);">
+              <button
+                class="cm-module-overlay chumi-button-title primary-btn d-inline-flex align-items-center mt-20"
+              >
+                <span class="mr-10">{{
+                  data.chumi_slogan.actionButtonTitle
+                }}</span
+                ><span class="lnr lnr-arrow-right"></span>
+              </button>
+              <br />
+            </a>
+          </ng-container>
+          <ng-container *ngIf="!post?.fromEditTemplate">
+            <a href="{{ data.chumi_slogan.actionButtonURL }}" target="_blank">
+              <button
+                class="cm-module-overlay chumi-button-title primary-btn d-inline-flex align-items-center mt-20"
+              >
+                <span class="mr-10">{{
+                  data.chumi_slogan.actionButtonTitle
+                }}</span
+                ><span class="lnr lnr-arrow-right"></span>
+              </button>
+              <br />
+            </a>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Banner Area -->
+
+<!-- Start quote Area -->
+<section
+  class="cm-section-overlay chumi_about quote-area pt-100 pb-100"
+  [hidden]="!data.chumi_about.show"
+  #feature
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12 quote-left">
+        <h2 class="cm-module-overlay text-right chumi-about-title">
+          {{ data.chumi_about.aboutTitle }}
+        </h2>
+      </div>
+      <div class="col-lg-6 col-sm-12 quote-right">
+        <p class="cm-module-overlay text-left chumi-about-content">
+          {{ data.chumi_about.aboutContent }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End quote Area -->
+
+<!-- Start feature Area -->
+<section
+  class="cm-section-overlay chumi_speakers feature-area pb-100"
+  id="feature"
+  [hidden]="!data.chumi_speakers.show"
+  #artist
+>
+  <div class="container">
+    <div class="row">
+      <ng-container
+        *ngFor="let item of data.chumi_speakers.speaker_name; let i = index"
+      >
+        <div class="col-lg-4 col-md-4 no-padding single-img">
+          <img
+            src="{{ data.chumi_speakers.speakerImg[i] }}"
+            class="chumi-speakerimg image img-fluid"
+          />
+          <div class="middle">
+            <h2 class=" chumi-speaker-name text-uppercase text-white">
+              {{ data.chumi_speakers.speaker_name[i] }}
+            </h2>
+            <p class=" chumi-speaker-intro">
+              {{ data.chumi_speakers.speaker_intro[i] }}
+            </p>
+          </div>
+        </div>
+      </ng-container>
+      <!--
+  
+                <ng-container *ngFor="let sitem of data.chumi_video.video_name; let i = index">
+                  <div class="chumi_video col-lg-6 col-sm-12 no-padding single-img">
+                    <img src="{{data.chumi_video.videoimg[i]}}" class="cm-module-overlay image img-fluid chumi-video-img">
+                    <div class="middle2">
+                      <a href="{{data.chumi_video.video_link[i]}}" class="play-btn chumi-video-link">
+                        <img class="chumi-vdo-icon" src="http://images.chumi.co/music_1/img/video-btn.png" alt="">
+                      </a>
+                      <h2 class="cm-module-overlay text-uppercase text-white chumi-video-name">{{data.chumi_video.video_name[i]}}</h2>
+                      <p class="cm-module-overlay chumi-video-intro">{{data.chumi_video.video_intro[i]}}</p>
+                    </div>
+                  </div>
+                </ng-container>
+  
+          -->
+    </div>
+  </div>
+</section>
+<!-- End feature Area -->
+
+<!-- Start service Area -->
+<section
+  style="background-position: center"
+  class="cm-section-overlay chumi_service pt-100 pb-100 chumi-service-bgimg "
+  data-parallax="scroll"
+  [style.background-image]="'url(' + data.chumi_service.service_bgImg + ')'"
+  [hidden]="!data.chumi_service.show"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <!--<ng-contaner *ngFor="let item of data.serviceContent">-->
+        <div
+          class="single-service d-flex justify-content-between align-items-top"
+          *ngFor="let item of data.chumi_service?.servicetitle; let i = index"
+        >
+          <div class="icon">
+            <img
+              class="chumi-service-icon"
+              src="{{ (data.chumi_service?.serviceicon)[i] }}"
+              alt=""
+            />
+          </div>
+          <div class="desc">
+            <h4 class="cm-module-overlay text-uppercase chumi-service-title">
+              {{ data.chumi_service.servicetitle[i] }}
+            </h4>
+            <p class="cm-module-overlay chumi-service-content">
+              {{ data.chumi_service.servicecontent[i] }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End service Area -->
+
+<!-- Start About Area -->
+<section
+  class="cm-section-overlay chumi_intro about-area"
+  id="about"
+  [hidden]="!data.chumi_intro.show"
+>
+  <div class="container-fluid">
+    <div class="row  d-flex justify-content-start align-items-center">
+      <div class="col-lg-6 col-md-12 no-padding">
+        <img
+          class="cm-module-overlay img-fluid chumi-intro-img"
+          src="{{ data.chumi_intro.introimg }}"
+          alt=""
+        />
+      </div>
+      <div class="about-details col-lg-4 col-md-12">
+        <h2 class="cm-module-overlay chumi-intro-title">
+          {{ data.chumi_intro.introtitle }}
+        </h2>
+        <p class="cm-module-overlay chumi-intro-content">
+          {{ data.chumi_intro.introcontent }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About Area -->
+
+<!-- Start contact Area -->
+<section
+  class="cm-section-overlay chumi_footer contact-area pt-100 pb-100"
+  id="contact"
+  #contact
+  [hidden]="!data.chumi_footer.show"
+>
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-8 title-section">
+        <h2 class="cm-module-overlay chumi-footer-left text-uppercase">
+          {{ data.chumi_footer.footerLeft }}
+        </h2>
+        <p class="cm-module-overlay chumi-footer-right">
+          {{ data.chumi_footer.footerRight }}
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <div class="row justify-content-center">
+          <ng-container *ngIf="post && post.fromEditTemplate">
+            <a href="javascript:void(0);">
+              <button
+                class="cm-module-overlay chumi-button-title primary-btn d-inline-flex align-items-center mt-20"
+              >
+                <span class="mr-10">{{
+                  data.chumi_slogan.actionButtonTitle
+                }}</span
+                ><span class="lnr lnr-arrow-right"></span>
+              </button>
+              <br />
+            </a>
+          </ng-container>
+          <ng-container *ngIf="!post?.fromEditTemplate">
+            <a href="{{ data.chumi_slogan.actionButtonURL }}" target="_blank">
+              <button
+                class="cm-module-overlay chumi-button-title primary-btn d-inline-flex align-items-center mt-20"
+              >
+                <span class="mr-10">{{
+                  data.chumi_slogan.actionButtonTitle
+                }}</span
+                ><span class="lnr lnr-arrow-right"></span>
+              </button>
+              <br />
+            </a>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer-area">
+  <div class="container">
+    <div class="row footer-content">
+      <div class="col-lg-12 text-center copy-right-text">
+        <a href="https://www.chumi.co" target="_blank"
+          >© 2019 All rights reserved | Event Ticketing Partner Chumi</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- <app-popup_1 [Popup]="Popup"></app-popup_1> -->
+<!--<app-socialPopup></app-socialPopup>-->
+<!-- End contact Area -->
+<!-- <app-chatbox [ticketing]="chatbox" [eventId]="chatbotEventId"></app-chatbox> -->
+<!-- </div> -->
+
+<!-- Strat Footer Area -->
+
+<!--<footer class="footer-area">-->
+<!--<div class="container">-->
+<!--<div class="row footer-content">-->
+<!--<div class="col-lg-6 copy-right-text">-->
+<!--&lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;-->
+<!--Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>-->
+<!--&lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;-->
+<!--</div>-->
+<!--<div class="col-lg-6 footer-social">-->
+<!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+<!--<a href="#"><i class="fa fa-dribbble"></i></a>-->
+<!--<a href="#"><i class="fa fa-behance"></i></a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</footer>-->

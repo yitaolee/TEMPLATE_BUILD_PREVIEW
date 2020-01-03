@@ -7,6 +7,7 @@ import { PagesSharedModule } from './shared/shared.module';
 import { EventComponent } from './event/event.component';
 import { CommonModule } from '@angular/common';
 import { DemoComponent } from './templates/demo/demo.component';
+import { MusicComponent } from './templates/music/music.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { DemoComponent } from './templates/demo/demo.component';
     TemplateComponent,
     EventComponent,
     DisplayComponent,
-    DemoComponent
+    DemoComponent,
+    MusicComponent
   ],
   providers: [
   ],
