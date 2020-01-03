@@ -2,26 +2,35 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
+* Clone the repo
+* Run npm install
+* Run ng serve
+* Open http://localhost:4200/templates/demo
+
 ## Convert html page to angular component
 
 * Create a new component in templates folder for a new template
+* Create a path to the new template in pages-routing.module.ts
 * Copy body of html to component html
-* mark section in html (refer to wiki for section names and values)
-* replace all values in html with data.section.someValue
-* replace repeated structure with ngFor
+* Mark section in html (refer to wiki for section names and values)
+* Replace all values in html with data.section.someValue
+* Replace repeated structure with ngFor
 * Copy css to component css
 * Upload js files to s3 and use loadScripts function to load them in ngOnInit
 
 ## Build Web Element
 
-* copy all methods of ts to test.component.ts under TEMPLATE_BUILD project
-* copy contents of css to test.component.scss under TEMPLATE_BUILD project
-* copy contents of html to test.component.html under TEMPLATE_BUILD project
-* npm run build:ce
-* chumi-element.js will be created in elements folder, rename it (e.g. chumi-someTemplateName.js)
+* Copy all methods of ts to test.component.ts under TEMPLATE_BUILD project
+* Variable data does not need to be copied (required later in Test Web Element)
+* Copy contents of css to test.component.scss under TEMPLATE_BUILD project
+* Copy contents of html to test.component.html under TEMPLATE_BUILD project
+* Run npm run build:ce
+* chumi-element.js will be created in elements folder
 
 ## Test Web Element
 
 * Copy the web element to assets folder
+* data need to be put in DefaultTemplateData class as a new public static readonly member
+* Put a new case someTemplateName in getDefaultData in TemplateComponent Class
 * Use http://localhost:4200/preview/someTemplateName to check if the page is loaded succesfully
-* Upload to s3
+* Rename it (e.g. chumi-someTemplateName.js) and upload to s3
