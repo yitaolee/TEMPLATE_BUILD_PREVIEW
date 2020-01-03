@@ -98,8 +98,15 @@ export class TemplateComponent {
   }
 
   getPageName() {
-    const page = this.path.split('/')[2];
-    return page ? page : '';
+    let page = ''
+    if (this.path) {
+      page = this.path.split('/')[2];
+    } else {
+      const snapshot = this.route.snapshot;
+      page = snapshot.params['tname'];
+    }
+    
+    return page;
   }
 
   getDefaultData(page: string) {
@@ -110,12 +117,14 @@ export class TemplateComponent {
         return DefaultTemplateData.bandwagonDarkPrice;
       case 'searching':
         return DefaultTemplateData.bandwagonDarkSearch;
+      case 'musico_2':
+        return DefaultTemplateData.demo;
     }
   }
 
   add() {
-    const src = `chumi-dark-${this.getPageName()}.js`;
-    // const src = 'chumi-element.js';
+    // const src = `chumi-dark-${this.getPageName()}.js`;
+    const src = 'chumi-element.js';
     this.celSvr.load(src);
     this.tile = document.createElement('chumi-test') as any;
 
