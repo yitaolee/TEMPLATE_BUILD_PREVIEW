@@ -7,6 +7,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Run ng serve
 * Open http://localhost:4200/templates/demo
 
+* Clone TEMPLATE_BUILD repo as well
+* Run npm install
+* No need to run ng serve
+
 ## Convert html page to angular component
 
 * Create a new component in templates folder for a new template
