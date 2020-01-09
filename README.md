@@ -6,7 +6,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Run npm install
 * Run ng serve
 * Open http://localhost:4200/templates/demo
-
 * Clone TEMPLATE_BUILD repo as well
 * Run npm install
 * No need to run ng serve
@@ -33,7 +32,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Test Web Element
 
-* Copy the web element to assets folder
+* Go back to TEMPLATE_BUILD_PREVIEW project
+* Copy the web element created from previous step to assets folder
 * data need to be put in DefaultTemplateData class as a new public static readonly member
 * Put a new case someTemplateName in getDefaultData in TemplateComponent Class
 * Use http://localhost:4200/preview/someTemplateName to check if the page is loaded succesfully
