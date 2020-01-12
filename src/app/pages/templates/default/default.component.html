@@ -19,20 +19,22 @@
 
 <body class="menu-is-closed">
 <div class="animsition">
-    <header class="header" id="navbar">
+    <header class="chumi_header header" [hidden]="!data.chumi_header.show" id="navbar">
         <nav>
             <a class="header-logo" href="#">
-                <!-- <img src="server/images/logo.svg" alt="" > -->
+                <img src="{{data?.chumi_header?.logo}}" alt="logo" >
             </a>
             <div class="nav-list">
                 <div class="nav-list flex-end">
                     <ul>
-                        <li>
-                            <a href="#">Create event</a>
-                        </li>
-                        <li>
-                            <a href="#">Support</a>
-                        </li>
+                      <li
+                        style="cursor: pointer"><a
+                              href="{{data?.chumi_header?.navURL[0]}}">{{data?.chumi_header?.navTitle[0]}}</a>
+                      </li>
+                      <li
+                          style="cursor: pointer"><a
+                              href="{{data?.chumi_header?.navURL[1]}}">{{data?.chumi_header?.navTitle[1]}}</a>
+                      </li>
                     </ul>
                     <button type="button" class="btn btn-sm btn-primary">Sign in</button>
                 </div>
@@ -46,15 +48,15 @@
     <div class="menu">
         <span class="close-menu fe fe-x right-boxed"></span>
         <ul class="menu-list right-boxed">
-            <li class="active">
-                <a href="javascript:;">Create event</a>
-            </li>
-            <li>
-                <a href="">Support</a>
-            </li>
-            <li>
-                <a href="#">Sign in</a>
-            </li>
+          <li><a
+                  href="{{data?.chumi_header?.navURL[0]}}">{{data?.chumi_header?.navTitle[0]}}</a>
+          </li>
+          <li><a
+                  href="{{data?.chumi_header?.navURL[1]}}">{{data?.chumi_header?.navTitle[1]}}</a>
+          </li>
+          <li><a
+                  href="{{data?.chumi_header?.navURL[2]}}">{{data?.chumi_header?.navTitle[2]}}</a>
+          </li>
         </ul>
         <div class="menu-footer right-boxed">
             <div class="social-list">
@@ -74,28 +76,27 @@
                             <div class="post-cover" style="background-image:url(https://images.chumi.co/cover-5d7867482b82a83371ef6737-1578688673600.jpeg)"></div>
                             <div class="post-sidebar">
                                 <small>MUSIC EVENT</small>
-                                <h2>New Years Eve Salsa Party with Havana Ventu</h2>
-                                <p class="by-organizer">By Genius Productions</p>
+                                <h2>{{data.title}}</h2>
+                                <p class="by-organizer">By {{data.creatorName}}</p>
                                 <div class="layout-info-content">
                                     <div class="layout-info-item">
                                         <i class="fe fe-clock"></i>
                                         <div class="layout-info-item-body">
                                             <h3>Date & Time</h3>
-                                            <p>Mon, Dec 02, 2019</p>
-                                            <p>7:30 PM EST</p>
+                                            <p>{{data.eventStartTime}}</p>
+                                            <!-- <p>7:30 PM EST</p> -->
                                         </div>
                                     </div>
                                     <div class="layout-info-item">
                                         <i class="fe fe-map-pin"></i>
                                         <div class="layout-info-item-body">
                                             <h3>Location</h3>
-                                            <p>The Orpheum, 601 Smithe St, Vancouver, BC V6B 3L4, Canada</p>
+                                            <p>{{data.location}}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -104,8 +105,8 @@
             <div class="wrapper">
                 <div class="post-content-foot">
                     <div class="post-content-foot-left">
-                        <div class="pcf-time">Doors Open<span>6:30pm</span></div>
-                        <div class="pcf-price">Ticket from<span><span class="pcf-symbol">$</span>135</span></div>
+                        <div class="pcf-time">Doors Open<span>{{data.startTime}}</span></div>
+                        <div class="pcf-price">Ticket from<span><span class="pcf-symbol">$</span>{{data.priceMin}}</span></div>
                     </div>
                     <div class="post-content-foot-right">
                         <button class="btn btn-primary btn-block">Buy Tickets</button>
@@ -115,22 +116,22 @@
                     <div class="event-main-content">
                         <div class="post-sidebar">
                             <small>MUSIC EVENT</small>
-                            <h2>New Years Eve Salsa Party with Havana Ventu</h2>
-                            <p class="by-organizer">By Genius Productions</p>
+                            <h2>{{data.title}}</h2>
+                            <p class="by-organizer">By {{data.creatorName}}</p>
                             <div class="layout-info-content">
                                 <div class="layout-info-item">
                                     <i class="fe fe-clock"></i>
                                     <div class="layout-info-item-body">
                                         <h3>Date & Time</h3>
-                                        <p>Mon, Dec 02, 2019</p>
-                                        <p>7:30 PM EST</p>
+                                        <p>{{data.eventStartTime}}</p>
+                                        <!-- <p>7:30 PM EST</p> -->
                                     </div>
                                 </div>
                                 <div class="layout-info-item">
                                     <i class="fe fe-map-pin"></i>
                                     <div class="layout-info-item-body">
                                         <h3>Location</h3>
-                                        <p>The Orpheum, 601 Smithe St, Vancouver, BC V6B 3L4, Canada</p>
+                                        <p>{{data.location}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -192,8 +193,8 @@
                     <div class="organizer">
                         <h2>Organizer</h2>
                         <a href="#" class="organizer-item">
-                            <!-- <img src="server/images/organizer.png" alt="" width="85"> -->
-                            <p>LULA</p>
+                            <img src="{{data.creatorIcon}}" alt="" width="85">
+                            <p>{{data.creatorName}}</p>
                         </a>
                     </div>
                 </div>
