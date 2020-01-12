@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>play-btn</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="play-btn" fill-rule="nonzero">
+            <circle id="椭圆形" fill="#FE5C48" cx="32" cy="32" r="32"></circle>
+            <g id="c-link" transform="translate(26.000000, 23.000000)" fill="#FFFFFF">
+                <path d="M3.06,0.91 L13.29,7.31 C13.8738528,7.67567126 14.2284092,8.3160881 14.2284092,9.005 C14.2284092,9.6939119 13.8738528,10.3343287 13.29,10.7 L3.06,17.09 C2.44285427,17.4757192 1.66489494,17.4957578 1.02871012,17.1423218 C0.392525306,16.7888858 -0.00145816802,16.1177678 -4.03364315e-06,15.39 L-4.03364315e-06,2.61 C-0.00145816802,1.88223217 0.392525306,1.21111423 1.02871012,0.857678222 C1.66489494,0.504242212 2.44285427,0.524280817 3.06,0.91 L3.06,0.91 Z" id="c"></path>
+            </g>
+        </g>
+    </g>
+</svg>

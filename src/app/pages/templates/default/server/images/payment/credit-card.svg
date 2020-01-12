@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="34px" viewBox="0 0 46 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>credit-card</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Step-3" transform="translate(-108.000000, -549.000000)" fill-rule="nonzero">
+            <g id="Group-5" transform="translate(58.000000, 537.000000)">
+                <g id="credit-card" transform="translate(50.000000, 12.000000)">
+                    <path d="M43,34 L3,34 C1.343,34 0,32.657 0,31 L0,3 C0,1.343 1.343,0 3,0 L43,0 C44.657,0 46,1.343 46,3 L46,31 C46,32.657 44.657,34 43,34 Z" id="Shape" fill="#BFDEE0"></path>
+                    <rect id="Rectangle-path" fill="#223E49" x="0" y="6" width="46" height="8"></rect>
+                    <rect id="Rectangle-path" fill="#FFFFFF" x="6" y="20" width="22" height="4"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

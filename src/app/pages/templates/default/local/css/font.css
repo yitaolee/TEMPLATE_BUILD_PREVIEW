@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Graphik;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('../../server/fonts/graphik/GraphikRegular.eot'), /* IE9*/
+    url("../../server/fonts/graphik/GraphikRegular.woff2") format("woff2"),
+    url("../../server/fonts/graphik/GraphikRegular.woff") format("woff"),
+    url('../../server/fonts/graphik/GraphikRegular.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../../server/fonts/graphik/GraphikRegular.svg') format('svg'); /* iOS 4.1- */
+}
+@font-face {
+    font-family: Graphik;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url('../../server/fonts/graphik/GraphikMedium.eot'), /* IE9*/
+    url("../../server/fonts/graphik/GraphikMedium.woff2") format("woff2"),
+    url("../../server/fonts/graphik/GraphikMedium.woff") format("woff"),
+    url('../../server/fonts/graphik/GraphikMedium.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../../server/fonts/graphik/GraphikMedium.svg') format('svg'); /* iOS 4.1- */
+}
+@font-face {
+    font-family: Graphik;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url('../../server/fonts/graphik/GraphikSemibold.eot'), /* IE9*/
+    url("../../server/fonts/graphik/GraphikSemibold.woff2") format("woff2"),
+    url("../../server/fonts/graphik/GraphikSemibold.woff") format("woff"),
+    url('../../server/fonts/graphik/GraphikSemibold.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../../server/fonts/graphik/GraphikSemibold.svg') format('svg'); /* iOS 4.1- */
+}
+
+@font-face {
+    font-family: Graphik;
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../../server/fonts/graphik/GraphikBold.eot'), /* IE9*/
+    url("../../server/fonts/graphik/GraphikBold.woff2") format("woff2"),
+    url("../../server/fonts/graphik/GraphikBold.woff") format("woff"),
+    url('../../server/fonts/graphik/GraphikBold.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../../server/fonts/graphik/GraphikBold.svg') format('svg'); /* iOS 4.1- */
+}

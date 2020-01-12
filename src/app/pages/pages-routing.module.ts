@@ -4,7 +4,8 @@ import { PagesComponent } from "./shared/pages/pages.component";
 import { TemplateComponent } from "./template/template.component";
 import { EventComponent } from "./event/event.component";
 import { DemoComponent } from "./templates/demo/demo.component";
-import { MusicComponent } from "./templates/music/music.component";
+import { DefaultComponent } from './templates/default/default.component';
+import { MusicComponent } from './templates/music/music.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
       { path: "preview/:tname/:page", component: TemplateComponent },
       { path: "template/edit", component: TemplateComponent },
       { path: "templates/demo", component: DemoComponent },
-      { path: "templates/music", component: MusicComponent }
+      { path: "templates/music", component: MusicComponent },
+      { path: "templates/default", component: DefaultComponent }
     ]
   }
 ];
