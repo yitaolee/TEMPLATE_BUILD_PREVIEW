@@ -8,12 +8,12 @@
 
 @font-face {
     font-family: "remixicon";
-    src: url('../fonts/remixicon.eot?t=1572783693335'); /* IE9*/
-    src: url('../fonts/remixicon.eot?t=1572783693335#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url("../fonts/remixicon.woff2?t=1572783693335") format("woff2"),
-    url("../fonts/remixicon.woff?t=1572783693335") format("woff"),
-    url('../fonts/remixicon.ttf?t=1572783693335') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-    url('../fonts/remixicon.svg?t=1572783693335#remixicon') format('svg'); /* iOS 4.1- */
+    src: url('https://images.chumi.co/default_2010_01/font/remixicon/remixicon.eot?t=1572783693335'); /* IE9*/
+    src: url('https://images.chumi.co/default_2010_01/font/remixicon/remixicon.eot?t=1572783693335#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url("https://images.chumi.co/default_2010_01/font/remixicon/remixicon.woff2?t=1572783693335") format("woff2"),
+    url("https://images.chumi.co/default_2010_01/font/remixicon/remixicon.woff?t=1572783693335") format("woff"),
+    url('https://images.chumi.co/default_2010_01/font/remixicon/remixicon.ttf?t=1572783693335') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('https://images.chumi.co/default_2010_01/font/remixicon/remixicon.svg?t=1572783693335#remixicon') format('svg'); /* iOS 4.1- */
     font-display: swap;
 }
 

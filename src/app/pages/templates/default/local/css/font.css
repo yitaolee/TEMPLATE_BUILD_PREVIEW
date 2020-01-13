@@ -3,33 +3,33 @@
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: url('../../server/fonts/graphik/GraphikRegular.eot'), /* IE9*/
-    url("../../server/fonts/graphik/GraphikRegular.woff2") format("woff2"),
-    url("../../server/fonts/graphik/GraphikRegular.woff") format("woff"),
-    url('../../server/fonts/graphik/GraphikRegular.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-    url('../../server/fonts/graphik/GraphikRegular.svg') format('svg'); /* iOS 4.1- */
+    src: url('https://images.chumi.co/default_2010_01/font/graphik/GraphikRegular.eot'), /* IE9*/
+    url("https://images.chumi.co/default_2010_01/font/graphik/GraphikRegular.woff2") format("woff2"),
+    url("https://images.chumi.co/default_2010_01/font/graphik/GraphikRegular.woff") format("woff"),
+    url('https://images.chumi.co/default_2010_01/font/graphik/GraphikRegular.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('https://images.chumi.co/default_2010_01/font/graphik/GraphikRegular.svg') format('svg'); /* iOS 4.1- */
 }
 @font-face {
     font-family: Graphik;
     font-weight: 500;
     font-style: normal;
     font-display: swap;
-    src: url('../../server/fonts/graphik/GraphikMedium.eot'), /* IE9*/
-    url("../../server/fonts/graphik/GraphikMedium.woff2") format("woff2"),
-    url("../../server/fonts/graphik/GraphikMedium.woff") format("woff"),
-    url('../../server/fonts/graphik/GraphikMedium.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-    url('../../server/fonts/graphik/GraphikMedium.svg') format('svg'); /* iOS 4.1- */
+    src: url('https://images.chumi.co/default_2010_01/font/graphik/GraphikMedium.eot'), /* IE9*/
+    url("https://images.chumi.co/default_2010_01/font/graphik/GraphikMedium.woff2") format("woff2"),
+    url("https://images.chumi.co/default_2010_01/font/graphik/GraphikMedium.woff") format("woff"),
+    url('https://images.chumi.co/default_2010_01/font/graphik/GraphikMedium.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('https://images.chumi.co/default_2010_01/font/graphik/GraphikMedium.svg') format('svg'); /* iOS 4.1- */
 }
 @font-face {
     font-family: Graphik;
     font-weight: 600;
     font-style: normal;
     font-display: swap;
-    src: url('../../server/fonts/graphik/GraphikSemibold.eot'), /* IE9*/
-    url("../../server/fonts/graphik/GraphikSemibold.woff2") format("woff2"),
-    url("../../server/fonts/graphik/GraphikSemibold.woff") format("woff"),
-    url('../../server/fonts/graphik/GraphikSemibold.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-    url('../../server/fonts/graphik/GraphikSemibold.svg') format('svg'); /* iOS 4.1- */
+    src: url('https://images.chumi.co/default_2010_01/font/graphik/GraphikSemibold.eot'), /* IE9*/
+    url("https://images.chumi.co/default_2010_01/font/graphik/GraphikSemibold.woff2") format("woff2"),
+    url("https://images.chumi.co/default_2010_01/font/graphik/GraphikSemibold.woff") format("woff"),
+    url('https://images.chumi.co/default_2010_01/font/graphik/GraphikSemibold.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('https://images.chumi.co/default_2010_01/font/graphik/GraphikSemibold.svg') format('svg'); /* iOS 4.1- */
 }
 
 @font-face {
@@ -37,9 +37,9 @@
     font-weight: 700;
     font-style: normal;
     font-display: swap;
-    src: url('../../server/fonts/graphik/GraphikBold.eot'), /* IE9*/
-    url("../../server/fonts/graphik/GraphikBold.woff2") format("woff2"),
-    url("../../server/fonts/graphik/GraphikBold.woff") format("woff"),
-    url('../../server/fonts/graphik/GraphikBold.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-    url('../../server/fonts/graphik/GraphikBold.svg') format('svg'); /* iOS 4.1- */
+    src: url('https://images.chumi.co/default_2010_01/font/graphik/GraphikBold.eot'), /* IE9*/
+    url("https://images.chumi.co/default_2010_01/font/graphik/GraphikBold.woff2") format("woff2"),
+    url("https://images.chumi.co/default_2010_01/font/graphik/GraphikBold.woff") format("woff"),
+    url('https://images.chumi.co/default_2010_01/font/graphik/GraphikBold.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('https://images.chumi.co/default_2010_01/font/graphik/GraphikBold.svg') format('svg'); /* iOS 4.1- */
 }

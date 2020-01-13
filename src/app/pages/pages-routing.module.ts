@@ -12,6 +12,7 @@ const routes: Routes = [
     path: "",
     component: PagesComponent,
     children: [
+      { path: "", component: DefaultComponent },
       // { path: '',   redirectTo: '/info/home', pathMatch: 'full' }, // localhost, in production, nodejs will do redirect.
       { path: "post/:postId", component: EventComponent },
       {

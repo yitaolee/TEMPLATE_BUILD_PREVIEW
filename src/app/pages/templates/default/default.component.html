@@ -1,48 +1,24 @@
-<!-- <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Chumi</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content=""/>
-    <link rel="icon" href="server/images/fav.png" type="image/x-icon">
-    CSS Plugins
-    <link rel="stylesheet" href="server/plugins/slick/slick.css">
-    <link rel="stylesheet" href="server/plugins/animsition/animsition.min.css">
-    CSS Pages
-    <link rel="stylesheet" href="local/css/bootstrap-slim.css">
-    <link rel="stylesheet" href="local/css/feather.min.css">
-    <link rel="stylesheet" href="local/css/remixicon.css">
-    <link rel="stylesheet" href="local/css/font.css">
-    <link rel="stylesheet" href="local/scss/template.css">
-</head> -->
-
 <body class="menu-is-closed">
   <div class="animsition">
     <header
-      class="chumi_header header"
-      [hidden]="!data.chumi_header.show"
+      class="header"
       id="navbar"
     >
       <nav>
         <a class="header-logo" href="#">
-          <img src="{{ data?.chumi_header?.logo }}" alt="logo" />
+          <img src="{{ data?.logo }}" alt="logo" />
         </a>
         <div class="nav-list">
           <div class="nav-list flex-end">
             <ul>
               <li style="cursor: pointer">
-                <a href="{{ (data?.chumi_header?.navURL)[0] }}">{{
-                  (data?.chumi_header?.navTitle)[0]
-                }}</a>
+                <a href="{{ url.createEvent }}">Create Event</a>
               </li>
               <li style="cursor: pointer">
-                <a href="{{ (data?.chumi_header?.navURL)[1] }}">{{
-                  (data?.chumi_header?.navTitle)[1]
-                }}</a>
+                <a href="{{ url.support }}">Support</a>
               </li>
             </ul>
-            <button type="button" class="btn btn-sm btn-primary">
+            <button onclick="window.location.href = url.logIn;" type="button" class="btn btn-sm btn-primary">
               Sign in
             </button>
           </div>
@@ -57,19 +33,13 @@
       <span class="close-menu fe fe-x right-boxed"></span>
       <ul class="menu-list right-boxed">
         <li>
-          <a href="{{ (data?.chumi_header?.navURL)[0] }}">{{
-            (data?.chumi_header?.navTitle)[0]
-          }}</a>
+          <a href="{{ url.createEvent }}">Create Event</a>
         </li>
         <li>
-          <a href="{{ (data?.chumi_header?.navURL)[1] }}">{{
-            (data?.chumi_header?.navTitle)[1]
-          }}</a>
+          <a href="{{ url.support }}">Support</a>
         </li>
         <li>
-          <a href="{{ (data?.chumi_header?.navURL)[2] }}">{{
-            (data?.chumi_header?.navTitle)[2]
-          }}</a>
+          <a href="{{ url.logIn }}">Sign in</a>
         </li>
       </ul>
       <div class="menu-footer right-boxed">
@@ -82,7 +52,7 @@
       </div>
     </div>
     <main>
-      <div id="poster" class="event-banner">
+      <div id="poster" class="event-banner" style="z-index: 0">
         <div class="wrapper">
           <div class="post-content">
             <div class="post-content-inner">
@@ -92,7 +62,7 @@
                   [style.background-image]="'url(' + data.cover + ')'"
                 ></div>
                 <div class="post-sidebar">
-                  <small>MUSIC EVENT</small>
+                  <small>{{ data.type }}</small>
                   <h2>{{ data.title }}</h2>
                   <p class="by-organizer">By {{ data._creator.username }}</p>
                   <div class="layout-info-content">
@@ -160,27 +130,31 @@
                 </div>
               </div>
               <div class="layout-content-section">
-                <div class="event-intro hide">
-                  <h3 class="lcs-title">Event introuduce</h3>
+                <div class="content"></div>
+                <!-- <div class="event-intro hide">
+                  <h3 class="lcs-title">Event introduce</h3>
                   <div class="lcs-intro">
                     <p>
-                      {{ data._creator.description }}
+                      {{ data.content }}
                     </p>
                     <figure>
-                      <!-- <img src="server/images/juicy01.jpg" alt="The Pulpit Rock"> -->
                     </figure>
                   </div>
+
                   <h3 class="lcs-title">Event video</h3>
                   <div class="lcs-intro">
-                    <figure>
+                    <figure *ngFor="let v of data?.chumi_video?.video_link">
                       <iframe
                         width="100%"
-                        src="https://www.youtube.com/embed/TbFWYT9VGRk"
+                        [src]="sanitizer.bypassSecurityTrustResourceUrl(v)"
                         frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen
                       ></iframe>
                     </figure>
+                    <p>
+                      {{ data?.chumi_video?.video_content }}
+                    </p>
                   </div>
                 </div>
                 <a class="read-more" href="javascript:;">Read More...</a>
@@ -191,7 +165,7 @@
                     {{ data?.location }}
                   </p>
                   <p><a href="#">View map</a></p>
-                </div>
+                </div> -->
                 <h3 class="lcs-title">Share with friends</h3>
                 <div class="lcs-intro">
                   <div class="lcs-social-list">
