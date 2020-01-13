@@ -1,42 +1,48 @@
-import { Component, OnInit, Renderer2, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, OnInit, Renderer2, Inject } from "@angular/core";
+import { DOCUMENT } from "@angular/common";
 
 // import { loadScripts } from 'app/pages/display/utility-functions';
 
 @Component({
-  selector: 'app-default',
-  templateUrl: './default.component.html',
+  selector: "app-default",
+  templateUrl: "./default.component.html",
   styleUrls: [
-    './default.component.css',
-    './server/plugins/slick/slick.css',
-    './server/plugins/animsition/animsition.min.css',
-    './local/css/bootstrap-slim.css',
-    './local/css/feather.min.css',
-    './local/css/remixicon.css',
-    './local/css/font.css',
-    './local/scss/template.css',
+    "./default.component.css"
+    // "./server/plugins/slick/slick.css",
+    // "./server/plugins/animsition/animsition.min.css",
+    // "./local/css/bootstrap-slim.css",
+    // "./local/css/feather.min.css",
+    // "./local/css/remixicon.css",
+    // "./local/css/font.css",
+    // "./local/scss/template.css"
   ]
 })
 export class DefaultComponent implements OnInit {
-
   data: any;
   scriptsIndex = 0;
   scripts = [
-    'https://code.jquery.com/jquery-3.4.1.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/background-blur/0.1.3/background-blur.min.js',
-    './assets/js/global.js',
+    "https://code.jquery.com/jquery-3.4.1.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/background-blur/0.1.3/background-blur.min.js",
+    "./assets/js/global.js"
   ];
   scriptsNodes = [];
 
-  constructor(@Inject(DOCUMENT) private _document, private renderer: Renderer2) {
+  constructor(
+    @Inject(DOCUMENT) private _document,
+    private renderer: Renderer2
+  ) {
     this.data = {
-      'chumi_header': {
-        'show': true,
-        'logo': 'https://images.chumi.co/musico2/img/logo@2x.png',
-        'navTitle': ['Create Event', 'Support', 'Sign in'],
-        'navURL': ['https://www.chumi.co', 'https://www.chumi.co', 'https://www.chumi.co'],
-        'navExternalTitle': []
+      chumi_header: {
+        show: true,
+        logo: "https://images.chumi.co/musico2/img/logo@2x.png",
+        navTitle: ["Create Event", "Support", "Sign in"],
+        navURL: [
+          "https://www.chumi.co",
+          "https://www.chumi.co",
+          "https://www.chumi.co"
+        ],
+        navExternalTitle: []
       },
       // 'chumi_about': {
       //   'show': true,
@@ -129,14 +135,24 @@ export class DefaultComponent implements OnInit {
       //   'Itunes': 'https://www.chumi.co',
 
       // },
-
-      title: 'New Years Eve Salsa Party with Havana Ventu',
-      creatorIcon: 'https://dhjjgq45wu4ho.cloudfront.net/userPhoto-5d7867482b82a83371ef6737-1571691103294.jpeg',
-      creatorName: 'Genius Productions',
-      eventStartTime: 'Mon, Dec 02, 2019 7:30 PM EST',  // new
-      location: 'The Orpheum, 601 Smithe St, Vancouver, BC V6B 3L4, Canada',
-      startTime: '7:30 PM', // new
+      cover:
+        "https://images.chumi.co/cover-5d7867482b82a83371ef6737-1578688673600.jpeg",
+      mainCover:
+        "https://images.chumi.co/cover-5d7867482b82a83371ef6737-1578688673600.jpeg",
+      title: "New Years Eve Salsa Party with Havana Ventu",
+      creatorIcon:
+        "https://dhjjgq45wu4ho.cloudfront.net/userPhoto-5d7867482b82a83371ef6737-1571691103294.jpeg",
+      creatorName: "Genius Productions",
+      eventStartTime: "Mon, Dec 02, 2019 7:30 PM EST", // new
+      location: "The Orpheum, 601 Smithe St, Vancouver, BC V6B 3L4, Canada",
+      startTime: "7:30 PM", // new
       priceMin: 5,
+      _creator: {
+        description: `The exuberant rhythms of live salsa music, the pulsating
+        dance floor, and the flavours of Latin-American and
+        Caribbean-inspired dishes and cocktails will transport you
+        far away from the icy streets of Toronto.`
+      }
     };
   }
 
@@ -150,12 +166,12 @@ export class DefaultComponent implements OnInit {
 
     console.log(this.scripts);
 
-    console.log(this.scriptsIndex+ "scriptsNodes"+this.scripts.length);
+    console.log(this.scriptsIndex + "scriptsNodes" + this.scripts.length);
 
     if (this.scriptsIndex < this.scripts.length) {
       // load dependency js
-      const s = this.renderer.createElement('script');
-      s.type = 'text/javascript';
+      const s = this.renderer.createElement("script");
+      s.type = "text/javascript";
       s.onload = this.loadScriptsInOrder.bind(this);
       s.src = this.scripts[this.scriptsIndex];
       s.text = ``;
@@ -171,7 +187,7 @@ export class DefaultComponent implements OnInit {
   loadNextScript() {
     console.log("scriptsNodes");
 
-    const s = this.renderer.createElement('script');
+    const s = this.renderer.createElement("script");
     this.scriptsNodes.push(s);
     s.text = `
       $('.navbar-toggle').on('click',function(){
@@ -215,53 +231,50 @@ export class DefaultComponent implements OnInit {
         $('.event-intro').removeClass('hide');
         $(this).remove();
     })
-    `
+    `;
     this.renderer.appendChild(this._document.body, s);
   }
 
-//   <script>
-    // $('.navbar-toggle').on('click',function(){
-    //     $('body').removeClass('menu-is-closed').addClass('menu-is-opened');
-    // });
-    // $('.close-menu, .click-capture, .menu-list a[href*="\/"]').on('click', function(){
-    //     $('body').removeClass('menu-is-opened').addClass('menu-is-closed');
-    //     $('.menu-list ul').slideUp(300);
-    // });
-    // var dropToggle = $('.menu-list > li').has('ul').children('a');
-    // dropToggle.on('click',function(){
-    //     dropToggle.not(this).closest('li').find('ul').slideUp(200);
-    //     $(this).closest('li').children('ul').slideToggle(200);
-    //     return false;
-    // });
-// </script>
-// <script>
-    // $(function() {
-    //     var $previewEl = $('#poster');
-    //     var url = $(".post-cover").css("background-image").split("\"")[1];
-    //     $previewEl.backgroundBlur({
-    //         imageURL : url,
-    //         blurAmount : 10,
-    //         imageClass : 'bg-blur',
-    //         overlayClass : 'bg-blur-overlay',
-    //         duration: 1000,
-    //         endOpacity : 1
-    //     });
-    //     sticky();
-    // });
-    // $(window).scroll(function() {
-    //     sticky();
-    // });
-    // function sticky() {
-    //     let e = $(this).scrollTop(),
-    //         t = $(".event-main");
-    //     500 <= e ? t.addClass("sticky") : t.removeClass("sticky");
-    // }
-// </script>
+  //   <script>
+  // $('.navbar-toggle').on('click',function(){
+  //     $('body').removeClass('menu-is-closed').addClass('menu-is-opened');
+  // });
+  // $('.close-menu, .click-capture, .menu-list a[href*="\/"]').on('click', function(){
+  //     $('body').removeClass('menu-is-opened').addClass('menu-is-closed');
+  //     $('.menu-list ul').slideUp(300);
+  // });
+  // var dropToggle = $('.menu-list > li').has('ul').children('a');
+  // dropToggle.on('click',function(){
+  //     dropToggle.not(this).closest('li').find('ul').slideUp(200);
+  //     $(this).closest('li').children('ul').slideToggle(200);
+  //     return false;
+  // });
+  // </script>
+  // <script>
+  // $(function() {
+  //     var $previewEl = $('#poster');
+  //     var url = $(".post-cover").css("background-image").split("\"")[1];
+  //     $previewEl.backgroundBlur({
+  //         imageURL : url,
+  //         blurAmount : 10,
+  //         imageClass : 'bg-blur',
+  //         overlayClass : 'bg-blur-overlay',
+  //         duration: 1000,
+  //         endOpacity : 1
+  //     });
+  //     sticky();
+  // });
+  // $(window).scroll(function() {
+  //     sticky();
+  // });
+  // function sticky() {
+  //     let e = $(this).scrollTop(),
+  //         t = $(".event-main");
+  //     500 <= e ? t.addClass("sticky") : t.removeClass("sticky");
+  // }
+  // </script>
 
   gotoURL(el) {
     el.scrollIntoView();
   }
-
 }
-
-
