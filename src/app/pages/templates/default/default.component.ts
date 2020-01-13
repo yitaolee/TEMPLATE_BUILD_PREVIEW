@@ -24,7 +24,7 @@ export class DefaultComponent implements OnInit {
     "https://code.jquery.com/jquery-3.4.1.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/background-blur/0.1.3/background-blur.min.js",
-    "./assets/js/global.js"
+    "https://images.chumi.co/default_2010_01/globel.js"
   ];
   scriptsNodes = [];
 
