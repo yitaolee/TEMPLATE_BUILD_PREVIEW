@@ -94,7 +94,7 @@
                 <div class="post-sidebar">
                   <small>MUSIC EVENT</small>
                   <h2>{{ data.title }}</h2>
-                  <p class="by-organizer">By {{ data.creatorName }}</p>
+                  <p class="by-organizer">By {{ data._creator.username }}</p>
                   <div class="layout-info-content">
                     <div class="layout-info-item">
                       <i class="fe fe-clock"></i>
@@ -188,7 +188,7 @@
                 <div class="lcs-intro">
                   <p class="text-black">Lula Lounge</p>
                   <p class="text-secondary">
-                    1585 Dundas St W, Toronto, ON M6K 1T9, Canada
+                    {{ data?.location }}
                   </p>
                   <p><a href="#">View map</a></p>
                 </div>
@@ -207,11 +207,8 @@
               <div class="layout-content-section side">
                 <h3 class="lcs-title">Tags</h3>
                 <div class="lcs-intro">
-                  <div class="tag-list">
-                    <a>Canada Events</a>
-                    <a>Ontario Events</a>
-                    <a>Things To Do In Toronto, Canada</a>
-                    <a>Toronto Art Performances</a>
+                  <div class="tag-list" *ngFor="let tag of data?.tags">
+                    <a>{{ tag }}</a>
                   </div>
                 </div>
               </div>
@@ -221,8 +218,8 @@
             <div class="organizer">
               <h2>Organizer</h2>
               <a href="#" class="organizer-item">
-                <img src="{{ data.creatorIcon }}" alt="" width="85" />
-                <p>{{ data.creatorName }}</p>
+                <img src="{{ data._creator.userphoto }}" alt="" width="85" />
+                <p>{{ data._creator.username }}</p>
               </a>
             </div>
           </div>
