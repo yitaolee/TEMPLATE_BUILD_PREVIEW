@@ -1,0 +1,315 @@
+@charset "UTF-8";
+/*------------------------------------
+  Button
+------------------------------------*/
+
+.btn {
+    display: inline-block;
+    font-weight: 500;
+    color: $textColor;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 1rem 1.75rem;
+    font-size: 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 0;
+    transition: $transitionNormal;
+    @media (prefers-reduced-motion: reduce) {
+        & {
+            transition: none;
+        }
+    }
+
+    &:hover {
+        color: $textColor;
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:disabled, &.disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+    }
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+    pointer-events: none;
+}
+
+// Btn Size
+.btn-lg {
+    padding: 1.25rem 2.5rem;
+}
+
+.btn-sm {
+    padding: .75rem 1.25rem;
+    font-size: 0.875rem;
+}
+
+.btn-block {
+    width: 100%;
+    display: block !important;
+}
+
+// @include btn;
+// @include btn(true);
+// @include btn($bgColor:$yellow);
+@mixin btn($bgColor: $primary, $textColor:$white) {
+    color: $textColor;
+    background-color: $bgColor;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: $transitionNormal;
+        @include gradient-vertical(rgba(0,0,0, .01),rgba(0,0,0, .1));
+    }
+    &:hover, &:focus {
+        color: $textColor;
+        background-color: darken($bgColor, 5%);
+        &:after {
+            opacity: 1;
+        }
+    }
+    &:disabled, &.disabled {
+        &:hover {
+            background-color: $bgColor;
+        }
+    }
+}
+
+@mixin btn-outline($borderWidth: 1px, $borderColor: $black, $Color: $black, $fill: true) {
+    color: $Color;
+    border: $borderWidth solid $borderColor;
+    @if $fill {
+        &:hover, &:focus {
+            color: #fff;
+            background-color: $Color;
+        }
+    } @else {
+        &:hover {
+            background-color: rgba($Color, .05);
+        }
+    }
+}
+
+
+// Btn Style
+
+// ---------- 朴素按钮 ----------
+.btn-hover-light {
+    &:hover {
+        opacity: .7;
+    }
+}
+
+// ---------- 链接箭头按钮 ----------
+.btn-link {
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+
+    i {
+        font-weight: 600;
+        margin-left: 10px;
+        transition: $transitionNormal;
+    }
+
+    &:hover {
+        color: $primary;
+
+        i {
+            margin-left: 15px;
+        }
+    }
+}
+
+// ---------- 实心按钮 ----------
+//主色
+.btn-primary {
+    @include btn;
+}
+
+//黑色
+.btn-dark {
+    @include btn($black);
+
+    &:hover {
+        background-color: $primary;
+    }
+
+    &:disabled, &.disabled {
+        &:hover {
+            background-color: $black;
+        }
+    }
+}
+
+//白色
+.btn-white {
+    @include btn($white, $black);
+}
+
+//青色
+.btn-cyan {
+    @include btn($cyan, $black);
+}
+
+// ---------- 箭头按钮 ----------
+.arrow-btn {
+    display: inline-flex;
+    align-items: center;
+    padding-right: 1.5rem;
+    transition: $transitionNormal;
+    cursor: pointer;
+    //主色
+    &.arrow-btn-primary {
+        @include btn;
+
+        &:hover .btn,
+        &:focus .btn {
+            background-color: darken($primary, 5%);
+        }
+    }
+
+    //黑色
+    &.arrow-btn-dark {
+        @include btn($black);
+
+        &:hover .btn,
+        &:focus .btn {
+            background-color: darken($black, 5%);
+        }
+    }
+
+    .btn {
+        min-width: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    i {
+        font-weight: 600;
+        margin-left: 10px;
+        transition: $transitionNormal;
+    }
+
+    &:hover {
+        i {
+            transform: translateX(5px);
+        }
+    }
+}
+
+// ---------- 线框按钮 ----------
+.btn-outline-dark {
+    @include btn-outline;
+}
+.btn-outline-light {
+    @include btn-outline(1px, $gray, $black, false);
+}
+
+// ---------- Switch 按钮 ----------
+.switch {
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 30px;
+
+    input {
+        display: none;
+
+        &:checked ~ .switch-indicator {
+            background: rgba($primary, .3);
+
+            &::after {
+                background: $primary;
+                left: calc(100% - 20px);
+                box-shadow: 0 0 3px #fcfdfe;
+            }
+        }
+
+        &:disabled ~ span {
+            cursor: not-allowed;
+            opacity: .5;
+        }
+    }
+
+    &.disabled {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+
+}
+
+.switch-indicator {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 10px;
+    background-color: $gray;
+    border-radius: 20px;
+    vertical-align: middle;
+    transition: 0.3s;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: -5px;
+        width: 20px;
+        height: 20px;
+        transition: 0.3s;
+        cursor: inherit;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 3px #bbb;
+    }
+}
+
+.switch-description {
+    padding: 0 20px;
+}
+
+.switch-lg {
+
+    input:checked + .switch-indicator::after {
+        left: calc(100% - 28px);
+    }
+
+    .switch-indicator {
+        height: 30px;
+        width: 56px;
+
+        &::after {
+            background: #fff;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            top: 2px;
+            left: 2px;
+        }
+    }
+}

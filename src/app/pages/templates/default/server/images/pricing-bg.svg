@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="755px" height="605px" viewBox="0 0 755 605" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>形状结合</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M754.855316,88.7983538 L754.855316,113.201646 C748.375889,385.916066 525.27229,605.000288 251.000445,605.000288 C159.676563,605.000288 74.0256707,580.711032 0.155562936,538.240279 L0.155826128,231.217572 C47.1031239,322.533555 142.256512,384.999698 252,384.999698 C408.29628,384.999698 534.99987,258.296485 534.99987,102.000151 C534.99987,66.3647591 528.413422,32.2677394 516.39149,0.860039122 L745.051353,0.857834817 C750.799963,29.3733273 754.141646,58.7605285 754.855316,88.7983538 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pricing--Sell-tickets-online-Copy" transform="translate(-78.000000, -3474.000000)">
+            <g id="编组" transform="translate(78.000000, 3474.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="形状结合" fill="#8DEDEF" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

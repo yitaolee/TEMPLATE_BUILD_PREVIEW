@@ -7,11 +7,11 @@ declare var $: any;
 
 @Component({
   selector: 'app-changelanguage',
-  templateUrl: './changelanguage.component.html',
+  templateUrl: './changeLanguage.component.html',
   styleUrls: [
     '../../../../assets/bootstrap/css/bootstrap.css',
-    '../../../../assets/css/hs.megamenu.css', 
-    '../../../../assets/css/front.css', 
+    '../../../../assets/css/hs.megamenu.css',
+    '../../../../assets/css/front.css',
     '../../../../assets/font-awesome/css/fontawesome-all.min.css'
   ]
 })

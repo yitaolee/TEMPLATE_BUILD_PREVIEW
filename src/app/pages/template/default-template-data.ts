@@ -660,6 +660,42 @@ export class DefaultTemplateData {
         }
     };
 
+    public static readonly default = {
+        chumi_header: {
+            show: true,
+            logo: "https://images.chumi.co/musico2/img/logo@2x.png",
+            navTitle: ["Create Event", "Support", "Sign in"],
+            navURL: [
+              "https://www.chumi.co",
+              "https://www.chumi.co",
+              "https://www.chumi.co"
+            ],
+            navExternalTitle: []
+          },
+        cover:"https://images.chumi.co/cover-5d7867482b82a83371ef6737-1578688673600.jpeg",
+        mainCover:"https://images.chumi.co/cover-5d7867482b82a83371ef6737-1578688673600.jpeg",
+        title: "New Years Eve Salsa Party with Havana Ventu",
+        creatorName: "Genius Productions",
+        eventStartTime: "Mon, Dec 02, 2019 7:30 PM EST", // new
+        location: "The Orpheum, 601 Smithe St, Vancouver, BC V6B 3L4, Canada",
+        startTime: "7:30 PM", // new
+        priceMin: 5,
+        _creator: {
+        username: "demo user",
+        userphoto:"https://dhjjgq45wu4ho.cloudfront.net/userPhoto-5d7867482b82a83371ef6737-1571691103294.jpeg",
+        description: `The exuberant rhythms of live salsa music, the pulsating
+        dance floor, and the flavours of Latin-American and
+        Caribbean-inspired dishes and cocktails will transport you
+        far away from the icy streets of Toronto.`
+        },
+        tags: [
+        "Canada Events",
+        "Ontario Events",
+        "Things To Do In Toronto, Canada",
+        "Toronto Art Performances"
+        ]
+    }
+
     public static readonly demo = {
 
       'chumi_header': {

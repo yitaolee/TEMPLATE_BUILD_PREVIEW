@@ -1,0 +1,88 @@
+@charset "UTF-8";
+//-----------------------------------------------------
+// setting scss
+//-----------------------------------------------------
+
+
+// 开关设置
+//-----------------------------------------------------
+$printStyleSwitch:      false !default; //是否开启打印样式
+
+
+// font相关
+//-----------------------------------------------------
+$baseFontSize:          16px !default;
+$baseLineHeight:        1.5 !default;
+$baseFontFamily:        Graphik, "PingFang SC", Helvetica, Arial, sans-serif !default;
+
+
+// 元素上下间距
+//-----------------------------------------------------
+$baseGap:               20px !default;
+
+
+// 基本颜色
+// color function : http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// lighten($color, $amount)
+// darken($color, $amount)
+// opacify($color, $amount)
+// mix($color1, $color2[, $amount])
+//-----------------------------------------------------
+$black:                 #1C1C1C !default;
+$paragraph:             #585a5e !default;
+$grayDarker:            #797979 !default;
+$grayDark:              #ACACAC !default;
+$gray:                  #ccc !default;
+$grayLight:             #f5f5f5 !default;
+$grayLighter:           #f8f8f8 !default;
+$white:                 #fff !default;
+
+$orangeRed:             #FE5C48 !default;
+$yellow:                #FFC001 !default;
+$red:                   #E82F2F !default;
+$lightBrown:            #DED5C4 !default;
+$deepPink:              #FF4B97 !default;
+$cyan:                  #8DEDEF !default;
+$blue:                  #1665D8 !default;
+$primary:               $blue !default; //主色
+
+
+// link
+//-----------------------------------------------------
+// 如果只有一个值则滑过的值为这个值的darken 5%，如果
+// 有两个值则第二个值为滑过的值
+$linkColor:             #08c !default;
+$linkColorDark:         $black !default;
+
+// scaffolding
+//-----------------------------------------------------
+$bodyBgColor:           $white !default;
+$textColor:             $black !default;
+
+
+// placeholder
+//-----------------------------------------------------
+// 变量分别为：是否输出表单的占位符placeholder样式，文本色
+$placeholder:           true $gray !default;
+
+
+// 交互配色
+// 警告，错误，成功，提示
+//-----------------------------------------------------
+// 每个变量都有三个颜色值，分别为：文本色，背景色，边框色
+$warningColor:               #514721 #FFF6BF #FFD324 !default;
+$errorColor:                 #8A1F11 #FBE3E4 #FBC2C4 !default;
+$successColor:               #264409 #E6EFC2 #C6D880 !default;
+$infoColor:                  #205791 #D5EDF8 #92CAE4 !default;
+
+
+// radius
+//-----------------------------------------------------
+$baseRadius:            5px !default;
+$smallRadius:           3px !default;
+
+// transition
+//-----------------------------------------------------
+$transitionNormal:      all .4s cubic-bezier(.165, .84, .44, 1) !default;
+$transitionFast:        all .15s ease !default;
+

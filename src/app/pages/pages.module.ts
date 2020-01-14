@@ -8,6 +8,7 @@ import { EventComponent } from './event/event.component';
 import { CommonModule } from '@angular/common';
 import { DemoComponent } from './templates/demo/demo.component';
 import { MusicComponent } from './templates/music/music.component';
+import { DefaultComponent } from './templates/default/default.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { MusicComponent } from './templates/music/music.component';
     EventComponent,
     DisplayComponent,
     DemoComponent,
-    MusicComponent
+    MusicComponent,
+    DefaultComponent
   ],
   providers: [
   ],
