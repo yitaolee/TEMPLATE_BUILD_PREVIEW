@@ -6,7 +6,7 @@
     >
       <nav>
         <a class="header-logo" href="#">
-          <img src="{{ data?.logo }}" alt="logo" />
+          <img src="{{ data?.logo || 'https://www.chumi.co/assets/home_nov_2019/server/images/logo.svg' }}" alt="logo" />
         </a>
         <div class="nav-list">
           <div class="nav-list flex-end">
@@ -130,7 +130,7 @@
                 </div>
               </div>
               <div class="layout-content-section">
-                <div class="content"></div>
+                <div id="content"></div>
                 <!-- <div class="event-intro hide">
                   <h3 class="lcs-title">Event introduce</h3>
                   <div class="lcs-intro">
