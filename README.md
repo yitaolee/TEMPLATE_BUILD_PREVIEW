@@ -15,7 +15,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Create a new component in templates folder for a new template
 * Create a path to the new template in pages-routing.module.ts
 * Copy body of html to component html
-* Mark section in html (refer to wiki for section names and values)
+* Mark section in html (refer to wiki for section names called class in wiki and values https://github.com/yitaolee/chumiweb/wiki/add-class-detail)
 * Replace all values in html with data.section.someValue
 * Replace repeated structure with ngFor
 * Copy css to component css
